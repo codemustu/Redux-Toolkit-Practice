@@ -63,7 +63,7 @@ const fetchUsers = () => {
   return function (dispatch) {
     dispatch(fetchUsersRequest());
     axios
-      .get("https://jsonplaceholder.typicode.com/usessrs")
+      .get("https://jsonplaceholder.typicode.com/users")
       .then((response) => {
         const users = response.data.map((user) => user.id);
         dispatch(fetchUsersSuccess(users));
